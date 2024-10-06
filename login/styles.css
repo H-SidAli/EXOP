@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Keep video behind other content */
+}
+
+/* Logo and title */
+.logo-container {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo-container h2 {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 320px;
+    z-index: 1; /* Ensures the login box stays above the video */
+}
+
+.login-box h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* User input fields */
+.user-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #ff4dac;
+    font-size: 12px;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 10px 20px;
+    color: white;
+    background: #6200ea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Removes the underline from the link */
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #aa00ff;
+}
+
+/* Footer Text */
+.footer-text {
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-text a {
+    color: #4dacff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #ff4dac;
+}

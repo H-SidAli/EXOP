@@ -1,0 +1,291 @@
+body {
+    background-image: url('assets/background.png');
+    background-repeat : repeat;
+    background-position: center;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    transition: ease all
+}
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding-inline: 4%;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 0px;
+    .logo {
+        height: 30px;
+        img {
+            margin-top: 10px;
+            height:30px;
+        }
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .about{
+            text-decoration: none;
+            color: white;
+            padding-bottom: 24.6px;
+            padding-top: 24.6px;
+            padding-inline: 32px;
+        }
+        .account{
+            text-decoration: none;
+            color: white;
+            padding-inline: 32px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            #acc_icon {
+                margin-right: 20px;
+                background-image: url('assets/acc_icon.png');
+                width: 30px;
+                height: 28px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+
+            }
+        }
+        .home {
+            padding-top: 24.6px;
+            padding-bottom: 24.6px;
+            text-decoration: none;
+            color: white;
+            border-bottom: solid;
+            border-width: 1.6px;
+            padding-inline: 32px;
+        }
+        .home:hover {
+            background-color: rgba(255, 255, 255, 0.362);
+        }
+        .about:hover, .account:hover {
+            background-color: rgba(255, 255, 255, 0.149);
+            border-bottom: solid;
+            border-width: 1px;
+        }
+        .about:active, .account:active {
+            background-color: rgba(255, 255, 255, 0.362);
+            border-bottom: solid;
+            border-width: 1.6px;
+        }
+    }
+}
+
+.families {
+    z-index: 100;
+    height: 300px;
+    position: fixed;
+    left: 0;
+    padding: 0;
+    top: 25%;
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    .family {
+        img {
+            width: 20px;
+            margin-right: 20px;
+        }
+        font-family: 'Formation Sans Regular', sans-serif;
+        transition: ease-in-out 0.2s;
+        padding-top: 10px;
+        padding-bottom: 10px ;
+        padding-left: 30%;
+        padding-right: 20px;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border-bottom: transparent;
+    }
+    .family:hover {
+        transition: ease-in-out 0.2s;
+        background-color: rgba(255, 255, 255, 0.11);
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.277);
+    }
+}
+
+.exop-frame {
+    position: absolute;
+    top: -90px;
+    left: -90px;
+}
+
+.exopname {
+    position: absolute;
+    transition: all ease-in-out 0.1s;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    z-index: 20;
+    top: -50px;
+    left: 100px;
+    font-family: 'Formation Sans Regular', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 300;
+}
+
+
+.exopname:hover {
+    transition: all ease-in-out 0.1s;
+    text-shadow: 0px 0px 20px rgb(0, 89, 255);
+    color: rgb(0, 89, 255);
+}
+
+.exopdiv1 {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    left: 40%;
+    top: 370px;
+    width: 320px;
+    text-align: center;
+}
+
+.exopdiv2 {
+    cursor: pointer;
+    z-index: 0;
+    position: absolute;
+    left: 15%;
+    top: 300px;
+    width: 320px;
+    text-align: center;
+    
+}
+
+.exopdiv3 {
+    cursor: pointer;
+    z-index: 0;
+    position: absolute;
+    left: 65%;
+    top: 300px;
+    width: 320px;
+    text-align: center;
+}
+
+.exop1 {
+    position: absolute;
+    height: 320px;
+    width: 320px;
+    overflow: hidden;
+}
+
+.exop2 {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.exop3 {
+    position: absolute;
+    height: 320px;
+    width: 320px;
+    overflow: hidden;
+}
+
+
+.exopdiv1sel {
+    transition: all ease-in-out 5s;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    width: 320px;
+    text-align: center;
+}
+
+.exopdiv3sel, .exopdiv2sel {
+    display: none;
+}
+.family-presentation {
+    cursor: default;
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    text-align: center;
+    display: flex;
+    z-index: -100;
+    flex-direction: column;
+    align-items: center;
+    .family-name {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: 'Formation Sans Regular', sans-serif;
+        margin-bottom: 10px;
+    }
+    .definition {
+        width: 40%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .exopdiv1 {
+        display: block;
+        z-index: 1;
+        left: 25vw;
+        top: 425px;
+        width: 320px;
+        text-align: center;
+    }
+
+    .exopdiv2 {
+        display: block;
+        cursor: pointer;
+        z-index: 0;
+        left: 25vw;
+        top: 875px;
+        width: 320px;
+        text-align: center;
+
+    }
+
+    .exopdiv3 {
+        display: block;
+        cursor: pointer;
+        z-index: 0;
+        left: 25vw;
+        top: 1325px;
+        width: 320px;
+        margin-bottom: 100px ;
+        text-align: center;
+    }
+
+    .family-presentation {
+        .definition {
+            width: 70%;
+        }
+    }
+
+    header {
+        .home {
+            display: none;
+        }
+    }
+}
+
+.family-active{
+        transition: ease-in-out 0.2s;
+        background-color: rgba(255, 255, 255, 0.11);
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.277);
+}

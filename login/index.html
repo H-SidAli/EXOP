@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="nebula.3840x2160.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Logo and title -->
+    <div class="logo-container">
+        <img src="https://cdn.discordapp.com/attachments/1284974881645133946/1292139108071637062/exo-p.png?ex=6702a5d2&is=67015452&hm=365973079cc5458f69fe4f95c453f7aebefb8984a4ae3fe16aa8d32f059bdc8f&" alt="Logo" class="logo">
+        <h2>Welcome Star</h2>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="login-box">
+        <h2 id="SignInTittle">Sign Up</h2> <!-- Corrected title -->
+        <form id="loginForm">
+            <div class="user-box">
+                <input type="text" name="username" required id="username1">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" required id="password">
+                <label>Create Password</label>
+            </div>
+            <a href="../landingpage/intro.html" class="submit-btn" id="submitbutton">Sign Up</a>
+
+            <p class="footer-text">Already have an account? <a href="#" id="signinup">Login</a></p> <!-- Corrected link -->
+        </form>
+    </div>
+    <script src="login.js" ></script> <!-- Link to JavaScript -->
+</body>
+</html>
